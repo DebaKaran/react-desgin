@@ -1,11 +1,11 @@
 import './App.css'
-import MyComponent from './components/MyComponent'
+import MyComponentWrapper from './components/MyComponentWrapper'
 
 function App() {
 
   return (
     <>
-      <MyComponent />
+      <MyComponentWrapper />
     </>
   )
 }
