@@ -1,13 +1,15 @@
+import { LeftPanelContainer, RightPanelContainer, ScreenSplitContainer } from "./styled/ScreenSplit.styled"
+
 const ScreenSplit = ({left, right}) => {
   return (
-      <div style={{ display: "flex", gap: "20px" }}>
-        <div>
+      <ScreenSplitContainer>
+        <LeftPanelContainer>
           {left}
-        </div>
-        <div>
+        </LeftPanelContainer>
+        <RightPanelContainer>
           {right}
-        </div>
-      </div>
+        </RightPanelContainer>
+      </ScreenSplitContainer>
   )
 }
 
