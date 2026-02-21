@@ -6,10 +6,11 @@ export const ScreenSplitContainer = styled.div`
 `;
 
 export const LeftPanelContainer = styled.div`
-    flex: 1;
+    flex: ${props => props.weight};
     background-color: green;
 `;
 
 export const RightPanelContainer = styled.div`
+    flex: ${props => props.weight};
     background-color: blue;
 `;

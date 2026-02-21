@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <MyComponentWrapper />
+      {/* <MyComponentWrapper /> */}
       <ScreenSplitterWrapper />
     </>
   )
