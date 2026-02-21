@@ -1,14 +1,14 @@
-import { LeftPanelContainer, RightPanelContainer, ScreenSplitContainer } from "./styled/ScreenSplit.styled"
+import { Pane, ScreenSplitContainer } from "./styled/ScreenSplit.styled"
 
-const ScreenSplit = ({left, leftWeight, right, rightWeight}) => {
+const ScreenSplit = ({left, leftWeight, leftBg , right, rightWeight, rightBg}) => {
   return (
       <ScreenSplitContainer>
-        <LeftPanelContainer weight={leftWeight}>
+        <Pane weight={leftWeight} bg={leftBg}>
           {left}
-        </LeftPanelContainer>
-        <RightPanelContainer weight={rightWeight}>
+        </Pane>
+        <Pane weight={rightWeight} bg={rightBg}>
           {right}
-        </RightPanelContainer>
+        </Pane>
       </ScreenSplitContainer>
   )
 }

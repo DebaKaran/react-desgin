@@ -6,8 +6,10 @@ const ScreenSplitterWrapper = () => {
   return (
     <ScreenSplit left={<LeftPanel />} 
     leftWeight="1"
+    leftBg="green"
     right={<RightPanel />} 
-    rightWeight="4"/>
+    rightWeight="4"
+    rightBg="blue"/>
   );
 }
 

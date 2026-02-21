@@ -5,12 +5,7 @@ export const ScreenSplitContainer = styled.div`
     gap: 20px;
 `;
 
-export const LeftPanelContainer = styled.div`
+export const Pane = styled.div`
     flex: ${props => props.weight};
-    background-color: green;
-`;
-
-export const RightPanelContainer = styled.div`
-    flex: ${props => props.weight};
-    background-color: blue;
+    background-color: ${props => props.bg};;
 `;
