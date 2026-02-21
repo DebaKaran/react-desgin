@@ -1,6 +1,6 @@
-const LeftPanel = () => {
+const LeftPanel = ({name}) => {
   return (
-    <h1>LeftPanel</h1>
+    <h1>Hello {name}</h1>
   )
 }
 

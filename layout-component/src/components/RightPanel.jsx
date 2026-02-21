@@ -1,6 +1,6 @@
-const RightPanel = () => {
+const RightPanel = ({message}) => {
   return (
-    <h1>RightPanel</h1>
+    <h1>{message}</h1>
   )
 }
 

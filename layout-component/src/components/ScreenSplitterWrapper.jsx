@@ -4,10 +4,10 @@ import RightPanel from './RightPanel'
 
 const ScreenSplitterWrapper = () => {
   return (
-    <ScreenSplit left={<LeftPanel />} 
+    <ScreenSplit left={<LeftPanel name="Deba"/>} 
     leftWeight="1"
     leftBg="green"
-    right={<RightPanel />} 
+    right={<RightPanel message="Learn React"/>} 
     rightWeight="4"
     rightBg="blue"/>
   );
