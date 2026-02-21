@@ -5,9 +5,9 @@ import RightPanel from './RightPanel'
 const ScreenSplitterWrapper = () => {
   return (
     <ScreenSplit left={<LeftPanel />} 
-    leftWeight={1}
+    leftWeight="1"
     right={<RightPanel />} 
-    rightWeight={1}/>
+    rightWeight="4"/>
   );
 }
 
