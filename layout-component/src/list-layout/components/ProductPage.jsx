@@ -6,7 +6,7 @@ const ProductPage = () => {
   return (
     <GridContainer>
       {products.map((product) => (
-        <ProductCard product={product} />
+        <ProductCard key={product.id} product={product} />
       ))}
     </GridContainer>
   );
