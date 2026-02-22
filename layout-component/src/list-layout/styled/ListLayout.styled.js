@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 const gridStyle = css`
   display: grid;
-  grid-template-columns: repeat(${props => props.columns}, 1fr);
+  grid-template-columns: repeat(${props => props.$columns}, 1fr);
   gap: 1.5rem;
 `;
 
@@ -20,8 +20,8 @@ const horizontalStyle = css`
 
 export const ListWrapper = styled.div`
   ${props => {
-    if (props.variant === "grid") return gridStyle;
-    if (props.variant === "horizontal") return horizontalStyle;
+    if (props.$variant === "grid") return gridStyle;
+    if (props.$variant === "horizontal") return horizontalStyle;
     return verticalStyle;
   }}
 `;

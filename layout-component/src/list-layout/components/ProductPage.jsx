@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard";
 const ProductPage = () => {
 
   return (
-    <ListLayout items={products} variant="grid" columns={3}
+    <ListLayout items={products} $variant="grid" $columns={3}
         renderItem={(product) => (
             <ProductCard product={product} />
         )}
