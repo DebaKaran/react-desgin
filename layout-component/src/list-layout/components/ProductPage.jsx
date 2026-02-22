@@ -1,14 +1,15 @@
 import { products } from "../../data/Products";
-import { GridContainer } from "../styled/Products.styled";
+import ListLayout from "./ListLayout";
 import ProductCard from "./ProductCard";
 
 const ProductPage = () => {
+
   return (
-    <GridContainer>
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
-    </GridContainer>
+    <ListLayout items={products} variant="grid" columns={3}
+        renderItem={(product) => (
+            <ProductCard product={product} />
+        )}
+    />
   );
 }
 
