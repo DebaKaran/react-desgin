@@ -1,5 +1,5 @@
-import ScreenSplitterWrapper from './components/ScreenSplitterWrapper'
-import ProductPage from './list-layout/without-list-layout/components/ProductPage'
+import ProductPage from "./list-layout/components/ProductPage"
+
 
 function App() {
 
@@ -7,6 +7,7 @@ function App() {
     <>
       {/* <MyComponentWrapper /> */}
       {/* <ScreenSplitterWrapper /> */}
+      {/* <ProductPage /> */} 
       <ProductPage />
     </>
   )
