@@ -1,27 +1,19 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-const gridStyle = css`
+export const GridWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(${props => props.$columns}, 1fr);
+  grid-template-columns: repeat(${props => props.columns}, 1fr);
   gap: 1.5rem;
 `;
 
-const verticalStyle = css`
+export const VerticalWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 `;
 
-const horizontalStyle = css`
+export const HorizontalWrapper = styled.div`
   display: flex;
   overflow-x: auto;
   gap: 1.5rem;
-`;
-
-export const ListWrapper = styled.div`
-  ${props => {
-    if (props.$variant === "grid") return gridStyle;
-    if (props.$variant === "horizontal") return horizontalStyle;
-    return verticalStyle;
-  }}
 `;
