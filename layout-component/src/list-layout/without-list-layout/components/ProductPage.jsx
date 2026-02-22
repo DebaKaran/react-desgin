@@ -1,6 +1,6 @@
 import React from 'react'
-import { Card, GridContainer } from '../styled/Products.styled'
-import { products } from '../../data/Products'
+import { Card, GridContainer } from '../../styled/Products.styled'
+import { products } from '../../../data/Products'
 
 const ProductPage = () => {
   return (
