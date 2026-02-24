@@ -1,7 +1,13 @@
 import LoadingSpinner from '../commons/LoadingSpinner';
 import ErrorMessage from '../commons/ErrorMessage';
+import ProfileHeader from './ProfileHeader';
+import PostsList from '../posts/PostsList';
+import { useState } from 'react';
 
-const UserProfilePresenter = ({ user, posts, loading, error, onRetry }) => {
+const UserProfilePresenter = ({ user, posts, loading, error, onRetry, onUpdateUser }) => {
+
+    const [isEditing, setIsEditing] = useState(false);
+    const [formData, setFormData] = useState({});
 
     if (loading) {
         return (
@@ -29,9 +35,44 @@ const UserProfilePresenter = ({ user, posts, loading, error, onRetry }) => {
                 onRetry={onRetry} />
         );
     }
+    const handleSaveProfile = async () => {
+        const result = await onUpdateUser(formData);
+        if (result.success) {
+            setIsEditing(false);
+        }
+    }
 
+    const handleCancelEdit = () => {
+        setIsEditing(false);
+        if (user) {
+            setFormData({
+                name: user.name,
+                email: user.email,
+                bio: user.bio,
+            })
+        };
+
+    }
+
+    const handleInputChange = (field, value) => {
+        setFormData((prev) => ({
+            ...prev,
+            [field]: value,
+        }));
+    };
     return (
-        <div>UserProfilePresenter</div>
+        <div className="user-profile">
+            <ProfileHeader user={user}
+                isEditing={isEditing}
+                formData={formData}
+                onStartEdit={() => setIsEditing(true)}
+                onInputChange={handleInputChange}
+                onCancelEdit={handleCancelEdit}
+                onSaveProfile={handleSaveProfile}
+            />
+
+            <PostsList posts={posts} />
+        </div>
     )
 }
 
