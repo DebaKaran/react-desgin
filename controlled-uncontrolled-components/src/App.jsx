@@ -4,6 +4,7 @@ import FeedbackForm from './messy/FeedbackForm'
 import AutoFocusInput from './state_refs/components/AutoFocusInput'
 import Counter from './state_refs/components/Counter'
 import CounterWithRef from './state_refs/components/CounterWithRef'
+import UncontrolledFeedbackForm from './uncontrolled/UncontrolledFeedbackForm'
 
 function App() {
 
@@ -13,7 +14,8 @@ function App() {
       <AutoFocusInput /> */}
       {/* <CounterWithRef /> */}
       {/* <FeedbackForm /> */}
-      <ControlledFeedbackForm />
+      {/* <ControlledFeedbackForm /> */}
+      <UncontrolledFeedbackForm />
     </>
   )
 }
