@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from "axios";
+import UserProfilePresenter from './UserProfilePresenter';
 
 const UserProfileContainer = ({ userId }) => {
 
@@ -20,12 +21,14 @@ const UserProfileContainer = ({ userId }) => {
                 `${import.meta.env.VITE_API_BASE_URL}/api/users/${userId}`
             );
             setUser(response.data);
+
             //Form is not required as we are creating Container Component
             // setFormData({
             //     name: response.data.name,
             //     email: response.data.email,
             //     bio: response.data.bio,
             // });
+
         } catch (err) {
             setError("Failed to fetch user data");
         } finally {
@@ -44,8 +47,19 @@ const UserProfileContainer = ({ userId }) => {
             console.error("Failed to fetch posts");
         }
     };
+
+    const handleRetry = () => {
+        fetchUserData()
+    }
+
     return (
-        <div>UserProfileContainer</div>
+        <UserProfilePresenter
+            user={user}
+            posts={posts}
+            loading={loading}
+            error={error}
+            onRetry={handleRetry}
+        />
     )
 }
 
